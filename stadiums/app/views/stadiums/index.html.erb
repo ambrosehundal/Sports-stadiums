@@ -21,11 +21,9 @@
     <body>
       <div id="map"></div>
       <script>
-  
-        // This example displays a marker at the center of Australia.
-        // When the user clicks the marker, an info window opens.
-  
         function initMap() {
+
+          var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
           var levis = {lat: 37.4026462, lng: -121.9716};
           var googlepind = {lat: 37.4191656, lng: -122.0725556};
           var map = new google.maps.Map(document.getElementById('map'), {
@@ -113,6 +111,8 @@
           ]
           });
 
+          
+
           var football_marker = {
             path: 'm7.754 7.754c-3.686 3.686-6.114 8.616-6.911 13.581l13.822 13.822c4.965-0.797 9.895-3.225 13.581-6.911s6.114-8.616 6.911-13.581l-13.822-13.822c-4.965 0.797-9.895 3.225-13.581 6.911zm25.615-5.123c-2.662-1.479-5.735-2.121-8.897-2.067l10.965 10.964c0.053-3.162-0.589-6.235-2.068-8.897zm-30.738 30.738c2.662 1.479 5.736 2.121 8.898 2.067l-10.965-10.964c-0.054 3.161 0.588 6.235 2.067 8.897z',
             fillColor: '#662113',
@@ -120,6 +120,15 @@
             scale: 1
 
           }
+          var soccer_image = '/app/assets/images/soccer_marker.png'
+          var soccer_marker = new google.maps.Marker({
+            position: sj_earthquakes,
+            map: map,
+            icon: soccer_image
+
+          });
+
+          
 
   
           var contentString = '<div id="content">'+
