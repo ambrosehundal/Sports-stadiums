@@ -112,6 +112,15 @@
             }
           ]
           });
+
+          var football_marker = {
+            path: 'm7.754 7.754c-3.686 3.686-6.114 8.616-6.911 13.581l13.822 13.822c4.965-0.797 9.895-3.225 13.581-6.911s6.114-8.616 6.911-13.581l-13.822-13.822c-4.965 0.797-9.895 3.225-13.581 6.911zm25.615-5.123c-2.662-1.479-5.735-2.121-8.897-2.067l10.965 10.964c0.053-3.162-0.589-6.235-2.068-8.897zm-30.738 30.738c2.662 1.479 5.736 2.121 8.898 2.067l-10.965-10.964c-0.054 3.161 0.588 6.235 2.067 8.897z',
+            fillColor: '#662113',
+            fillOpacity: 1.0,
+            scale: 1
+
+          }
+
   
           var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
@@ -156,6 +165,7 @@
             position: googlepind,
             map: map,
             title: 'Google Pind'
+             
           });
           adda.addListener('click', function() {
             googlewindow.open(map, adda);
@@ -164,7 +174,8 @@
           var marker = new google.maps.Marker({
             position: levis,
             map: map,
-            title: 'Levis (SF 49ers)'
+            title: 'Levis (SF 49ers)',
+            icon: football_marker
           });
           marker.addListener('click', function() {
             infowindow.open(map, marker);
