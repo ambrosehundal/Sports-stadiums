@@ -35,12 +35,23 @@
           var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
 
           var futbol = [
-            ['SJ Earthquakes', 37.3515358,, -121.927683, 4],
-            ['Manchester', 53.4664387, -2.2923117, 5],
+            ['Manchester', 53.4664387, -2.2923117, 4],
             ['Bayern Munich', 48.2187997, 11.6225185, 3],
             ['Camp Nou', 41.3808748, 2.0527797, 2],
             ['Real Madrid', 40.4530541, -3.6905332, 1]
           ];
+
+          for (var i = 0; i < futbol.length; i++) {
+            var pelota = futbol[i];
+            var gola = new google.maps.Marker({
+              position: {lat: pelota[1], lng: pelota[2]},
+              map: map,
+              icon: soccer_icon,
+              shape: shape,
+              title: pelota[0],
+              zIndex: pelota[3]
+            });
+          }
 
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,
