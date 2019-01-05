@@ -23,9 +23,25 @@
       <script>
         function initMap() {
 
-          var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
+          
           var levis = {lat: 37.4026462, lng: -121.9716};
           var googlepind = {lat: 37.4191656, lng: -122.0725556};
+
+          #Soccer stadiums
+          var real_madrid = {lat: 40.4530541, lng: -3.6905332};
+          var camp_nou = {lat: 41.3808748, lng: 2.0527797};
+          var manchester = {lat: 53.4664387, lng: -2.2923117};
+          var bayern = {lat: 48.2187997, lng: 11.6225185};
+          var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
+
+          var futbol = [
+            ['SJ Earthquakes', 37.3515358,, -121.927683, 4],
+            ['Manchester', -33.923036, 151.259052, 5],
+            ['Bayern Munich', -34.028249, 151.157507, 3],
+            ['Camp Nou', -33.80010128657071, 151.28747820854187, 2],
+            ['Real Madrid', 40.4530541, -3.6905332, 1]
+          ];
+
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,
             center: levis,
@@ -189,6 +205,8 @@
           adda.addListener('click', function() {
             googlewindow.open(map, adda);
           });
+
+       
   
           var marker = new google.maps.Marker({
             position: levis,
@@ -198,6 +216,8 @@
           });
           marker.addListener('click', function() {
             infowindow.open(map, marker);
+            map.setZoom(8);
+            map.setCenter(marker.getPosition()); 
           });
         }
       </script>
