@@ -28,30 +28,30 @@
           var googlepind = {lat: 37.4191656, lng: -122.0725556};
 
           #Soccer stadiums
-          var real_madrid = {lat: 40.4530541, lng: -3.6905332};
-          var camp_nou = {lat: 41.3808748, lng: 2.0527797};
-          var manchester = {lat: 53.4664387, lng: -2.2923117};
-          var bayern = {lat: 48.2187997, lng: 11.6225185};
-          var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
+         # var real_madrid = {lat: 40.4530541, lng: -3.6905332};
+         # var camp_nou = {lat: 41.3808748, lng: 2.0527797};
+         # var manchester = {lat: 53.4664387, lng: -2.2923117};
+         # var bayern = {lat: 48.2187997, lng: 11.6225185};
+         # var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
 
-          var futbol = [
-            ['Manchester', 53.4664387, -2.2923117, 4],
-            ['Bayern Munich', 48.2187997, 11.6225185, 3],
-            ['Camp Nou', 41.3808748, 2.0527797, 2],
-            ['Real Madrid', 40.4530541, -3.6905332, 1]
-          ];
+         # var futbol = [
+         #   ['Manchester', 53.4664387, -2.2923117, 4],
+         #   ['Bayern Munich', 48.2187997, 11.6225185, 3],
+         #   ['Camp Nou', 41.3808748, 2.0527797, 2],
+         #   ['Real Madrid', 40.4530541, -3.6905332, 1]
+        #  ];
 
-          for (var i = 0; i < futbol.length; i++) {
-            var pelota = futbol[i];
-            var gola = new google.maps.Marker({
-              position: {lat: pelota[1], lng: pelota[2]},
-              map: map,
-              icon: soccer_icon,
-              shape: shape,
-              title: pelota[0],
-              zIndex: pelota[3]
-            });
-          }
+          #for (var i = 0; i < futbol.length; i++) {
+          #  var pelota = futbol[i];
+          #  var gola = new google.maps.Marker({
+          #    position: {lat: pelota[1], lng: pelota[2]},
+          #    map: map,
+          #    icon: soccer_icon,
+          #    shape: shape,
+          #    title: pelota[0],
+          #    zIndex: pelota[3]
+          #  });
+          #}
 
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,
@@ -157,13 +157,13 @@
           }
 
           
-          var soccer_image = '/app/assets/images/soccer.svg';
-          var soccer_marker = new google.maps.Marker({
-            position: sj_earthquakes,
-            map: map,
-            icon: soccer_icon
+       
+        #  var soccer_marker = new google.maps.Marker({
+        #    position: sj_earthquakes,
+        #    map: map,
+        #    icon: soccer_icon
 
-          });
+        #  });
 
           
 
@@ -233,7 +233,7 @@
         }
       </script>
       <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3WljtAzKgclgJEpq2bPt-_WgA47Kghdo&callback=initMap">
       </script>
     </body>
   </html>
