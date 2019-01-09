@@ -20,6 +20,8 @@
   %body
     #map
       
+    = javascript_include_tag "/assets/javascripts/sportsmap.js"
+
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=&callback=initMap"}
       :cdata
     %script{:async => "", :defer => "defer", :src => "/Users/ambrose/Desktop/Projects/Sports-stadiums/stadiums/app/assets/javascripts/sportsmap.js"}

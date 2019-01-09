@@ -1,17 +1,14 @@
-// This example adds a marker to indicate the position of Bondi Beach in Sydney,
-      // Australia.
+
       function initMap() {
         
 
         //Geo-locations of different stadiums
-        var futbol = [
-            ['Real_madrid',  40.4530541,  -3.6905332, 4 ]  
-            [ 'Camp Nou' , 41.3808748,  2.0527797, 3]
-            ['Manchester', 53.4664387, -2.2923117, 2]
-            ['Bayern Munich', 48.2187997,  11.6225185, 1 ] 
-        ];
+       
        
         var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
+        
+
+        //Create the map
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
@@ -98,6 +95,8 @@
           ]
         });
 
+        //shapes and markers on the map
+
         var triangleCoords = [
           real_madrid,
           camp_nou,
@@ -132,11 +131,6 @@
 
 
         //construct polyline
-        var fiveRings = [
-          {},
-          {},
-          {},
-          {},
-        ]
+        
         
       }
