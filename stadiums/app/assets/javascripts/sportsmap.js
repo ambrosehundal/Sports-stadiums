@@ -1,11 +1,16 @@
 // This example adds a marker to indicate the position of Bondi Beach in Sydney,
       // Australia.
       function initMap() {
+        
 
-        var real_madrid = {lat: 40.4530541, lng: -3.6905332};
-        var camp_nou = {lat: 41.3808748, lng: 2.0527797};
-        var manchester = {lat: 53.4664387, lng: -2.2923117};
-        var bayern = {lat: 48.2187997, lng: 11.6225185};
+        //Geo-locations of different stadiums
+        var futbol = [
+            ['Real_madrid',  40.4530541,  -3.6905332, 4 ]  
+            [ 'Camp Nou' , 41.3808748,  2.0527797, 3]
+            ['Manchester', 53.4664387, -2.2923117, 2]
+            ['Bayern Munich', 48.2187997,  11.6225185, 1 ] 
+        ];
+       
         var sj_earthquakes = {lat: 37.3515358, lng: -121.927683};
 
         var map = new google.maps.Map(document.getElementById('map'), {
